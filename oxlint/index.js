@@ -93,8 +93,10 @@ const config = {
     "jest/require-to-throw-message": "off",
     "jest/no-disabled-tests": "off",
 
-    // `hoisted-apis-on-top` reads `vi.mocked` as a hoisted API and
-    // `no-standalone-expect` objects to `expect` inside `beforeEach`.
+    // `hoisted-apis-on-top` reads `vi.mocked` as a hoisted API, and
+    // `no-standalone-expect` objects to `expect` inside `beforeEach` and in
+    // shared assertion helpers. The jest plugin has the same rule.
+    "jest/no-standalone-expect": "off",
     "vitest/hoisted-apis-on-top": "off",
     "vitest/no-standalone-expect": "off",
     "vitest/no-conditional-expect": "off",
