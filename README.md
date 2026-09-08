@@ -12,7 +12,9 @@ pnpm add -D github:thesis/oxc-config oxlint oxfmt oxlint-tsgolint
 
 Both tools read their config from a TypeScript file at the repository root. A JSON config cannot import a package, so `.oxlintrc.json` and `.oxfmtrc.json` do not work with this package.
 
-`oxlint.config.ts`:
+Name the files `oxlint.config.mts` and `oxfmt.config.mts` unless the root `package.json` has `"type": "module"`. Both tools find either name. With the `.ts` name in a repository without that field, Node prints a `MODULE_TYPELESS_PACKAGE_JSON` warning on every run.
+
+`oxlint.config.mts`:
 
 ```ts
 import { defineConfig } from "oxlint"
@@ -26,7 +28,7 @@ export default defineConfig({
 })
 ```
 
-`oxfmt.config.ts`:
+`oxfmt.config.mts`:
 
 ```ts
 import { defineConfig } from "oxfmt"
