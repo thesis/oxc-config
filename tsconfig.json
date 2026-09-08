@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "nodenext",
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": ["oxlint", "oxfmt", "test", "oxlint.config.ts", "oxfmt.config.ts"],
+  "exclude": ["test/fixtures"]
+}

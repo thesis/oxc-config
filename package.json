@@ -1,0 +1,33 @@
+{
+  "name": "@thesis-co/oxc-config",
+  "version": "0.1.0",
+  "description": "Shared oxlint and oxfmt configuration for Thesis projects",
+  "license": "MIT",
+  "repository": "github:thesis/oxc-config",
+  "type": "module",
+  "exports": {
+    "./oxlint": "./oxlint/index.js",
+    "./oxlint/react": "./oxlint/react.js",
+    "./oxfmt": "./oxfmt/index.js"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "check": "oxlint --type-aware . && oxfmt --check .",
+    "test": "node --test test/config.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "oxfmt": "0.67.0",
+    "oxlint": "1.82.0",
+    "oxlint-tsgolint": "7.0.2001",
+    "typescript": "7.0.2"
+  },
+  "peerDependencies": {
+    "oxfmt": ">=0.66.0",
+    "oxlint": ">=1.81.0"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "packageManager": "pnpm@11.1.2"
+}
