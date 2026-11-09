@@ -60,7 +60,7 @@ Two details are easy to miss:
 ## Requirements
 
 - Node.js 22.18 or newer, because oxlint and oxfmt load `*.config.ts` through Node's own TypeScript support.
-- The npm packages `oxlint` (1.81.0 or newer) and `oxfmt` (0.66.0 or newer). The standalone binaries do not load TypeScript configs.
+- The npm package of each tool you use: `oxlint` (1.81.0 or newer) for the oxlint config, `oxfmt` (0.66.0 or newer) for the oxfmt config. The standalone binaries do not load TypeScript configs. Both are optional peers, so the package manager installs only the ones you add.
 - `oxlint-tsgolint` for `--type-aware`.
 
 ## Development
